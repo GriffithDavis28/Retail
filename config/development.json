@@ -1,0 +1,6 @@
+{
+    "name": "My Prjoect App --Development",
+    "mail":{
+        "host":"dev-mail-server"
+    }
+}
