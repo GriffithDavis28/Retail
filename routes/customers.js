@@ -104,13 +104,15 @@ router.get('/', (req,res) => {
     customerquery=customerquery+" , "+customer.creditLimit+")";
     console.log(customerquery); 
     connection.query(customerquery, (err, result) => {
-      if (err) throw err
-    
-      // console.log('The solution is: ', rows[0])
-      // res.send(rows);
-      // Customers.push|(customer);
-      console.log(result);
-      res.send(result);
+      if (err){
+        res.status(202).send("Errors found")
+      return;
+     }
+        else
+        {
+        res.status(200).send("Record added successfully")
+      return;
+      }
   });
 })
 
